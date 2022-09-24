@@ -9,12 +9,12 @@ $ docker-compose build
 start django project
 
 ```
-$ docker-compose run --rm django-admin startproject config .
+$ docker-compose run --rm app django-admin startproject config .
 ```
 
 ## django database setting
 
-edit app/config/settings.py DATABASE
+edit app/source/config/settings.py DATABASE
 
 ```PYTHON
 DATABASES = {
@@ -29,10 +29,17 @@ DATABASES = {
 }
 ```
 
-### docker-compose up
+必要であれば以下も
+
+```PYTHON
+LANGUAGE_CODE = 'ja'
+TIME_ZONE = 'Asia/Tokyo'
+```
+
+### docker-compose up -d
 
 ```bash
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 ### django database migrate and create superuser
@@ -44,13 +51,13 @@ $ docker exec -it django bash
 django database migration
 
 ```bash
-$ python manage.py migrate
+$ python3 manage.py migrate
 ```
 
 django create superuser
 
 ```
-$ python manage.py createsuperuser
+$ python3 manage.py createsuperuser
 ```
 
 ### Login
