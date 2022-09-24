@@ -67,7 +67,11 @@ $ python3 manage.py createsuperuser
 ### DisallowedHost at と出る場合
 
 app/source/config/settings.py
+```
 ALLOWED_HOSTS = []
+```
 を
+```
 ALLOWED_HOSTS = ['XXX.XXX.XXX.XXX']
+```
 等に置き換える
