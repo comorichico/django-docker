@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.10.7
 ENV PYTHONBURRERED=1
 WORKDIR /django
 COPY requirements.txt requirements.txt
