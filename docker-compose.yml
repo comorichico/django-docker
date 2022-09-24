@@ -13,7 +13,7 @@ services:
     depends_on:
       - db
   db:
-    image: mysql:5.7
+    image: mariadb:10.9.3
     container_name: mysql
     volumes:
       - ./database/data:/var/lib/mysql
