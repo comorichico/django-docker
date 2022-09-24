@@ -63,3 +63,11 @@ $ python3 manage.py createsuperuser
 ### Login
 
 [`localhost:8000/admin`](http://localhost:8000/admin/)
+
+### DisallowedHost at と出る場合
+
+app/source/config/settings.py
+ALLOWED_HOSTS = []
+を
+ALLOWED_HOSTS = ['XXX.XXX.XXX.XXX']
+等に置き換える
