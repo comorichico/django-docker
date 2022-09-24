@@ -45,7 +45,7 @@ $ docker-compose up -d
 ### django database migrate and create superuser
 
 ```bash
-$ docker exec -it django bash
+$ docker exec -it app bash
 ```
 
 django database migration
